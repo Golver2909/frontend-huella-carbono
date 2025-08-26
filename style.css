@@ -1,0 +1,10 @@
+nav{
+    background-color: blue;
+}
+section{
+    background-color: greenyellow;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    
+}
