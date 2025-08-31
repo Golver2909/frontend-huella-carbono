@@ -8,3 +8,7 @@ section{
     justify-content: center;
     
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
