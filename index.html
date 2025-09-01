@@ -10,8 +10,19 @@
 <body class="bg-gray-100 min-h-screen">
     <!-- Contenedor principal -->
     <div class="container mx-auto px-4 py-8">
-        
-        <!-- Modal nativo dialog -->
+        <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Calculadora de Huella de Carbono</h1>
+        <!-- Botón para abrir el modal -->
+        <div class="flex justify-center mb-8">
+            <button 
+                id="abrir-modal"
+                class="rounded-md bg-emerald-500 hover:bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2"
+            >
+                Calcular Mi Huella de Carbono
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal nativo dialog -->
     <dialog id="dialog" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
         <div class="flex min-h-full items-center justify-center p-4 text-center">
             <div class="relative overflow-hidden rounded-xl bg-gray-800 text-left shadow-2xl transition-all w-full max-w-4xl max-h-[90vh]">
@@ -26,7 +37,7 @@
                 </div>
                 <!-- Contenido del formulario -->
                 <div class="bg-gray-800 overflow-y-auto max-h-[calc(90vh-120px)]">
-                 <form id="form-huella" class="p-6 space-y-8">
+                   <form id="form-huella" class="p-6 space-y-8">
                             
                             <!-- DATOS PERSONALES -->
                             <div class="space-y-4">
@@ -304,6 +315,6 @@
             </div>
         </div>
     </dialog>
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
