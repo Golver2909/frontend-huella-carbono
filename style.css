@@ -1,14 +1,10 @@
-nav{
-    background-color: blue;
-}
-section{
-    background-color: greenyellow;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    
-}
+
 
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+.card-custom {
+    margin: 29px;
+    /* separa cada tarjeta de las demás */
 }
