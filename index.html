@@ -1,19 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huella Carbono</title>
+    <title>Huella de Carbono</title>
+    <!-- Traemos Tailwind CSS para poder usar sus estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.formControlName="></script>
 </head>
-<body>
-    <nav>
-        Navbar de prueba
+
+<!-- Cuerpo de la página con colores claros y oscuros, y transición suave al cambiar de modo -->
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500">
+
+    <!-- Menú superior -->
+    <nav class="flex flex-col md:flex-row justify-between items-center p-4 bg-white dark:bg-gray-800 shadow">
+        <!-- Logo -->
+        <div class="text-xl font-bold">LOGO</div>
+
+        <!-- Enlaces de navegación y botón para cambiar de modo -->
+        <div class="flex space-x-4 mt-2 md:mt-0">
+            <a href="#" class="hover:text-green-600">Contáctanos</a>
+            <a href="#" class="hover:text-green-600">Sobre nosotros</a>
+            <!-- Botón para alternar entre modo claro y oscuro -->
+            <button id="toggleDark" class="px-2 py-1 rounded bg-gray-200 dark:bg-gray-700">🌙</button>
+        </div>
     </nav>
-    <section>
-        Section de prueba
+
+    <!-- Sección principal con imagen de fondo -->
+    <section class="text-center p-8 bg-cover bg-center"
+        style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');">
+
+        <h1 class="text-2xl md:text-4xl font-bold">Reduciendo Nuestra Huella de Carbono</h1>
+        <p class="mt-3 text-sm md:text-base">Construcción sostenible · Energías limpias · Espacios verdes</p>
+
+        <!-- Botones principales -->
+        <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#calculadora" class="px-4 py-2 bg-green-500 text-white rounded shadow hover:bg-green-600">Calcular
+                CO₂</a>
+            <a href="#" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded shadow">Contáctanos</a>
+        </div>
     </section>
+
+    <!-- Sección con información sobre huella de carbono -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 md:p-10 max-w-5xl mx-auto">
+        <!-- Tarjeta 1 -->
+        <div class="p-6 bg-white dark:bg-gray-800 rounded shadow">
+            <h2 class="text-lg md:text-xl font-semibold">¿Qué es una huella de carbono sostenible?</h2>
+            <p class="mt-2 text-justify text-sm md:text-base">
+                La huella de carbono promedio por persona es de unas 5 toneladas de CO₂ al año. Para cuidar el planeta,
+                debemos reducirla a menos de 2 toneladas al año.
+            </p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="p-6 bg-white dark:bg-gray-800 rounded shadow">
+            <h2 class="text-lg md:text-xl font-semibold">¿Cómo reducir tu impacto?</h2>
+            <p class="mt-2 text-justify text-sm md:text-base">
+                Puedes calcular tu impacto con un cuestionario sencillo y tomar decisiones conscientes sobre transporte,
+                energía, alimentación y hábitos diarios.
+            </p>
+        </div>
+
+        <!-- Sección con los factores que calculamos -->
+        <section class="p-6 md:p-12 bg-gray-50 dark:bg-gray-900">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Factores que calculamos</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-auto place-items-center">
+                <!-- Tarjeta Transporte -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-14 w-72 h-72 text-center hover:scale-105 transform transition">
+                    <img src="https://img.icons8.com/ios-filled/100/000000/bus.png" alt="Transporte"
+                        class="mx-auto mb-6 w-28 h-28">
+                    <h3 class="text-xl font-semibold">Transporte</h3>
+                </div>
+
+                <!-- Tarjeta Familia -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-14 w-72 h-72 text-center hover:scale-105 transform transition">
+                    <img src="https://img.icons8.com/color/96/family.png" alt="Familia" class="mx-auto mb-6 w-28 h-28">
+                    <h3 class="text-xl font-semibold">Tamaño de la familia</h3>
+                </div>
+
+                <!-- Tarjeta Clima -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-14 w-72 h-72 text-center hover:scale-105 transform transition">
+                    <img src="https://img.icons8.com/fluency/96/air-conditioner.png" alt="Clima"
+                        class="mx-auto mb-6 w-28 h-28">
+                    <h3 class="text-xl font-semibold">Calefacción y Aire Acondicionado</h3>
+                </div>
+
+                <!-- Tarjeta Alimento -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-14 w-72 h-72 text-center hover:scale-105 transform transition">
+                    <img src="https://img.icons8.com/fluency/96/vegetarian-food.png" alt="Alimento"
+                        class="mx-auto mb-6 w-28 h-28">
+                    <h3 class="text-xl font-semibold">Alimento</h3>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Calculadora de huella de carbono -->
+    <section id="calculadora" class="p-6 md:p-10 bg-green-50 dark:bg-gray-700">
+        <h2 class="text-xl md:text-2xl font-bold text-center mb-6">Calculadora de Huella de Carbono</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+            <!-- Formulario -->
+            <div class="p-6 bg-white dark:bg-gray-800 rounded shadow space-y-4">
+                <label class="block">🚗 Transporte (km por semana)</label>
+                <input type="number" id="transporte" class="w-full p-2 rounded border dark:bg-gray-900">
+
+                <label class="block">💡 Energía (kWh por mes)</label>
+                <input type="number" id="energia" class="w-full p-2 rounded border dark:bg-gray-900">
+
+                <label class="block">🍽️ Alimentación (comidas cárnicas por semana)</label>
+                <input type="number" id="alimentacion" class="w-full p-2 rounded border dark:bg-gray-900">
+
+                <button onclick="calcular()"
+                    class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">Calcular</button>
+            </div>
+
+            <!-- Resultado -->
+            <div class="p-6 bg-white dark:bg-gray-800 rounded shadow flex flex-col justify-center items-center">
+                <h3 class="text-lg md:text-xl font-semibold">Resultado:</h3>
+                <p id="resultado" class="mt-4 text-2xl font-bold">0 t CO₂/año</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center p-6 bg-gray-100 dark:bg-gray-800 mt-10">
+        <p class="text-sm md:text-base">© 2025 Redes del ITS</p>
+        <div class="flex justify-center space-x-4 mt-2 text-sm">
+            <a href="#" class="hover:text-green-600">Instagram</a>
+            <a href="#" class="hover:text-green-600">Facebook</a>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
 </body>
+
 </html>
