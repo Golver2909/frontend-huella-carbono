@@ -1,9 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Dark Mode
-  const toggleDark = document.getElementById("toggleDark");
-  toggleDark.addEventListener("click", () => {
-    //Selecciono la etiqueta html y aplico un toggle para poner o quitar la clase "dark"
-    document.querySelector("html").classList.toggle("dark")
+  // Dark Mode - Selecciono el boton "toggleDark" y le añado un evento click
+  document.getElementById("toggleDark").addEventListener("click", (d) => {
+    //Selecciono el documento "html"
+    const html = document.documentElement
+    const inicio = document.getElementById("inicio")
+    //aplico un toggle para poner o quitar la clase "dark"
+    html.classList.toggle("dark")
+
+    //Cambio el toggle y la imagen inicial segun el modo usando ternario
+    html.classList.contains("dark") ? 
+    (d.target.textContent = "☀️",inicio.classList.replace("light-img","dark-img")): 
+    (d.target.textContent = "🌙",inicio.classList.replace("dark-img","light-img"))
   });
 
 })

@@ -8,3 +8,10 @@ body {
     margin: 29px;
     /* separa cada tarjeta de las demás */
 }
+
+.dark-img{
+    background-image: url('./assets/foto-bosque.jpg');
+}
+.light-img{
+    background-image: url('./assets/foto-cielo.jpg');
+}
