@@ -5,47 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huella de Carbono</title>
-    <!-- Traemos Tailwind CSS para poder usar sus estilos -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para los íconos de los cards -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
-<!-- Cuerpo de la página con colores claros y oscuros, y transición suave al cambiar de modo -->
-
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500">
-
-    <!-- Menú superior -->
-    <nav class="flex flex-col md:flex-row justify-between items-center p-4 bg-white dark:bg-gray-800 shadow">
-        <!-- Logo -->
-        <div class="text-xl font-bold">LOGO</div>
-
-        <!-- Enlaces de navegación y botón para cambiar de modo -->
-        <div class="flex space-x-4 mt-2 md:mt-0">
-            <a href="#" class="hover:text-green-600">Contáctanos</a>
-            <a href="#" class="hover:text-green-600">Sobre nosotros</a>
-            <!-- Botón para alternar entre modo claro y oscuro -->
-            <button id="toggleDark" class="px-2 py-1 rounded bg-gray-200 dark:bg-gray-700">🌙</button>
-        </div>
-    </nav>
 
     <!-- Sección principal con imagen de fondo -->
     <section class="text-center p-8 bg-cover bg-center"
         style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');">
 
-        <h1 class="text-2xl md:text-4xl font-bold">Reduciendo Nuestra Huella de Carbono</h1>
-        <p class="mt-3 text-sm md:text-base">Construcción sostenible · Energías limpias · Espacios verdes</p>
+        <!-- Navbar glassmorphism con texto negro -->
+        <nav
+            class="relative z-10 flex flex-col md:flex-row justify-between items-center p-4 mx-6 mt-4 rounded-xl glassmorph text-black">
+            <div class="text-xl font-bold">LOGO</div>
+            <div class="flex space-x-4 mt-2 md:mt-0">
+                <a href="#" class="hover:text-green-600 font-medium">Contact Us</a>
+                <a href="#" class="hover:text-green-600 font-medium">About Us</a>
+                <button id="toggleDark" class="px-2 py-1 rounded bg-gray-200 dark:bg-gray-700">🌙</button>
+            </div>
+        </nav>
 
-        <!-- Botones principales -->
-        <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#calculadora" class="px-4 py-2 bg-green-500 text-white rounded shadow hover:bg-green-600">Calcular
-                CO₂</a>
-            <a href="#" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded shadow">Contáctanos</a>
+        <!-- Hero content glassmorphism con texto negro -->
+        <div class="relative z-10 flex flex-col items-center justify-center h-full py-8 px-6">
+            <div class="glassmorph w-full max-w-2xl mx-auto rounded-xl p-8 text-black">
+                <h1 class="text-2xl md:text-4xl font-bold mb-2 text-center">REDUCIENDO NUESTRA HUELLA DE CARBONO</h1>
+                <p class="text-base md:text-lg mb-4 text-center">Construcción Sostenible · Eficiencia Energética ·
+                    Espacios Verdes</p>
+                <p class="text-sm md:text-base mb-6 text-center">ACA IRA TEXTO EXPLICATIVO SOBRE NOSOTROS Y NUESTRO
+                    PROYECTO</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#calculadora"
+                        class="px-4 py-2 bg-green-500 text-white rounded shadow hover:bg-green-600">calcular CO2</a>
+                    <a href="#" class="px-4 py-2 bg-green-200 text-green-900 rounded shadow hover:bg-green-300">CONTACT
+                        US</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Sección con información sobre huella de carbono -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 md:p-10 max-w-5xl mx-auto">
-        <!-- Tarjeta 1 -->
+    <!-- Información principal -->
+    <section class="grid grid-cols-1 gap-6 p-6 md:p-10 max-w-5xl mx-auto">
         <div class="p-6 bg-white dark:bg-gray-800 rounded shadow">
             <h2 class="text-lg md:text-xl font-semibold">¿Qué es una huella de carbono sostenible?</h2>
             <p class="mt-2 text-justify text-sm md:text-base">
@@ -53,8 +55,6 @@
                 debemos reducirla a menos de 2 toneladas al año.
             </p>
         </div>
-
-        <!-- Tarjeta 2 -->
         <div class="p-6 bg-white dark:bg-gray-800 rounded shadow">
             <h2 class="text-lg md:text-xl font-semibold">¿Cómo reducir tu impacto?</h2>
             <p class="mt-2 text-justify text-sm md:text-base">
@@ -62,70 +62,45 @@
                 energía, alimentación y hábitos diarios.
             </p>
         </div>
-
-        <!-- Sección con los factores que calculamos -->
-        <section class="p-6 md:p-12 bg-gray-50 dark:bg-gray-900">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Factores que calculamos</h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-auto place-items-center">
-                <!-- Tarjeta Transporte -->
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-14 w-72 h-72 text-center hover:scale-105 transform transition">
-                    <img src="https://img.icons8.com/ios-filled/100/000000/bus.png" alt="Transporte"
-                        class="mx-auto mb-6 w-28 h-28">
-                    <h3 class="text-xl font-semibold">Transporte</h3>
-                </div>
-
-                <!-- Tarjeta Familia -->
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-14 w-72 h-72 text-center hover:scale-105 transform transition">
-                    <img src="https://img.icons8.com/color/96/family.png" alt="Familia" class="mx-auto mb-6 w-28 h-28">
-                    <h3 class="text-xl font-semibold">Tamaño de la familia</h3>
-                </div>
-
-                <!-- Tarjeta Clima -->
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-14 w-72 h-72 text-center hover:scale-105 transform transition">
-                    <img src="https://img.icons8.com/fluency/96/air-conditioner.png" alt="Clima"
-                        class="mx-auto mb-6 w-28 h-28">
-                    <h3 class="text-xl font-semibold">Calefacción y Aire Acondicionado</h3>
-                </div>
-
-                <!-- Tarjeta Alimento -->
-                <div
-                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-14 w-72 h-72 text-center hover:scale-105 transform transition">
-                    <img src="https://img.icons8.com/fluency/96/vegetarian-food.png" alt="Alimento"
-                        class="mx-auto mb-6 w-28 h-28">
-                    <h3 class="text-xl font-semibold">Alimento</h3>
-                </div>
-            </div>
-        </section>
     </section>
 
-    <!-- Calculadora de huella de carbono -->
-    <section id="calculadora" class="p-6 md:p-10 bg-green-50 dark:bg-gray-700">
-        <h2 class="text-xl md:text-2xl font-bold text-center mb-6">Calculadora de Huella de Carbono</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-
-            <!-- Formulario -->
-            <div class="p-6 bg-white dark:bg-gray-800 rounded shadow space-y-4">
-                <label class="block">🚗 Transporte (km por semana)</label>
-                <input type="number" id="transporte" class="w-full p-2 rounded border dark:bg-gray-900">
-
-                <label class="block">💡 Energía (kWh por mes)</label>
-                <input type="number" id="energia" class="w-full p-2 rounded border dark:bg-gray-900">
-
-                <label class="block">🍽️ Alimentación (comidas cárnicas por semana)</label>
-                <input type="number" id="alimentacion" class="w-full p-2 rounded border dark:bg-gray-900">
-
-                <button onclick="calcular()"
-                    class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">Calcular</button>
+    <!-- Cards Factores -->
+    <section class="max-w-6xl mx-auto px-4 py-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-blue-900">Factores que calculamos</h2>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="service-card w-full sm:w-[330px]">
+                <div class="service-icon">
+                    <i class="fas fa-bus"></i>
+                </div>
+                <h3 class="service-title">Transporte</h3>
+                <p class="service-brief">Tipo de vehículo, distancia recorrida y frecuencia de uso afectan tu huella de
+                    carbono.</p>
             </div>
-
-            <!-- Resultado -->
-            <div class="p-6 bg-white dark:bg-gray-800 rounded shadow flex flex-col justify-center items-center">
-                <h3 class="text-lg md:text-xl font-semibold">Resultado:</h3>
-                <p id="resultado" class="mt-4 text-2xl font-bold">0 t CO₂/año</p>
+            <div class="service-card w-full sm:w-[330px]">
+                <div class="service-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="service-title">Tamaño de la familia</h3>
+                <p class="service-brief">El número de integrantes en tu hogar influye en el consumo de recursos y
+                    energía.
+                </p>
+            </div>
+            <div class="service-card w-full sm:w-[330px]">
+                <div class="service-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <h3 class="service-title">Calefacción y Aire Acondicionado</h3>
+                <p class="service-brief">El uso de climatización impacta directamente en el consumo energético de tu
+                    vivienda.</p>
+            </div>
+            <div class="service-card w-full sm:w-[330px]">
+                <div class="service-icon">
+                    <i class="fas fa-carrot"></i>
+                </div>
+                <h3 class="service-title">Alimento</h3>
+                <p class="service-brief">Hábitos alimenticios y origen de los alimentos influyen en la producción de
+                    CO₂.
+                </p>
             </div>
         </div>
     </section>
