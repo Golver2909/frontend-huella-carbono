@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn2 = document.getElementById('cerrar-modal2');
     const form = document.getElementById('form-huella');
     const resultadoDiv = document.getElementById('resultado-co2');
+    const checked = document.getElementById('vegetariana');
+    const div = document.getElementById('div');
 
     console.log("dialog:", dialog);
     console.log("openBtn:", openBtn);
@@ -41,11 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Abrir el modal
     if (openBtn && dialog) {
         openBtn.addEventListener('click', () => {
-            console.log("abrir-modal click");
             dialog.showModal();
             if (resultadoDiv) {
-              
                 resultadoDiv.innerHTML = '';
+                resultadoDiv.style.display = 'none';
                 console.log("Resultado oculto y limpio.");
             }
             if (form) {
@@ -53,6 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log("Formulario reseteado.");
             } else {
                 console.log("No se encontró el formulario para resetear.");
+            }
+            // Restaurar visibilidad del div de carnes según el checkbox vegetariana
+            if (checked && div) {
+                if (checked.checked) {
+                    div.style.display = 'none';
+                } else {
+                    div.style.display = 'block';
+                }
             }
         });
     } else {
@@ -75,6 +84,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     } else {
         console.log("No se puede cerrar el modal con Cancelar porque faltan elementos:", { closeBtn2, dialog });
+    }
+
+    // Mostrar/ocultar carnes cuando se marca/desmarca vegetariana
+    if (checked && div) {
+        checked.addEventListener('change', () => {
+            if (checked.checked) {
+                div.style.display = 'none';
+            } else {
+                div.style.display = 'block';
+            }
+        });
     }
 
     // Submit del formulario
@@ -103,8 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Alimentación
             const carnes_agricolas = Array.from(form.querySelectorAll('input[name="carnes_agricolas[]"]:checked')).map(c => c.value);
             const carnes_pesqueras = Array.from(form.querySelectorAll('input[name="carnes_pesqueras[]"]:checked')).map(c => c.value);
-            const vegetariano = form.querySelector('input[name="dieta_especial"]:checked')?.value === 'vegetariana';
-
+            const vegetariano = checked.checked;
             console.log("Alimentación:", { carnes_agricolas, carnes_pesqueras, vegetariano });
 
             // Cálculo transporte (por semana)
