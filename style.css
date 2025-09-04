@@ -1,7 +1,12 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
-
+.dark-img{
+    background-image: url('./assets/foto-bosque.jpg');
+}
+.light-img{
+    background-image: url('./assets/foto-cielo.jpg');
+}
 /* Fondo hero usando TU imagen */
 .hero-background {
     background-image: url('https: //images.unsplash.com/photo-1506744038136-46273834b3fb');
