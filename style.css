@@ -1,10 +1,156 @@
-nav{
-    background-color: blue;
+body {
+    font-family: 'Poppins', sans-serif;
 }
-section{
-    background-color: greenyellow;
-    height: 500px;
+
+/* Fondo hero usando TU imagen */
+.hero-background {
+    background-image: url('https: //images.unsplash.com/photo-1506744038136-46273834b3fb');
+    /* <<--- Tu imagen local */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.glassmorph {
+    background: rgba(255, 255, 255, 0.18);
+    /* antes era 0.38, ahora más transparente */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Agrega este CSS al final de tu style.css para los nuevos cards */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    position: relative;
+    min-height: 320px;
+    transition: transform 0.3s cubic-bezier(.25, .8, .25, 1), box-shadow 0.3s cubic-bezier(.25, .8, .25, 1);
+    cursor: pointer;
     display: flex;
-    justify-content: center;
-    
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1.2rem 1.5rem 1.2rem;
 }
+
+.service-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 20px 25px -5px rgba(42, 67, 101, 0.07), 0 10px 10px -5px rgba(42, 67, 101, 0.03);
+}
+
+.service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+    width: 72px;
+    margin-bottom: 1.2rem;
+    background-color: #2a4365;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2.3rem;
+    box-shadow: 0 2px 8px rgba(42, 67, 101, 0.07);
+    transition: background-color 0.3s cubic-bezier(.25, .8, .25, 1), transform 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.service-card:hover .service-icon {
+    background-color: #e53e3e;
+    transform: scale(1.1);
+}
+
+.service-title {
+    text-align: center;
+    font-size: 1.23rem;
+    font-weight: 600;
+    color: #2a4365;
+    margin-bottom: 0.60rem;
+    letter-spacing: 0.02em;
+    transition: color 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.service-card:hover .service-title {
+    color: #e53e3e;
+}
+
+.service-brief {
+    text-align: center;
+    color: #718096;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    margin-top: 0.2rem;
+    padding: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .service-card {
+        min-height: 260px;
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+    }
+
+    .service-icon {
+        height: 58px;
+        width: 58px;
+        font-size: 1.5rem;
+    }
+}
+.checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            margin: 4px 0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .checkbox-option:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+        
+        .checkbox-option input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #10b981;
+        }
+        
+        .section-title {
+            color: #10b981;
+            font-weight: 600;
+            margin-bottom: 12px;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+            padding-bottom: 4px;
+        }
+        
+        .subsection-title {
+            color: #d1d5db;
+            font-weight: 500;
+            margin: 16px 0 8px 0;
+        }
+        .vegana{
+            display: none;
+        }
