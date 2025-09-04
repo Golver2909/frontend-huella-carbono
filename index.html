@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huella de Carbono</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
     <!-- Font Awesome para los íconos de los cards -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -15,15 +20,15 @@
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500">
 
     <!-- Sección principal con imagen de fondo -->
-    <section class="text-center p-8 bg-cover bg-center"
-        style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');">
+    <section id="inicio" class="text-center p-8 bg-cover bg-center light-img">
 
         <!-- Navbar glassmorphism con texto negro -->
         <nav
             class="relative z-10 flex flex-col md:flex-row justify-between items-center p-4 mx-6 mt-4 rounded-xl glassmorph text-black">
-            <div class="text-xl font-bold"><img src="./assets/logo-2.webp" alt="logo" class="w-14 md:w-18 h-auto mb-4 md:mb-0"> Co2 </div>
+            <div class="text-xl font-bold"><img src="./assets/logo-2.webp" alt="logo"
+                    class="w-14 md:w-18 h-auto mb-4 md:mb-0"> Co2 </div>
             <div class="flex space-x-4 mt-2 md:mt-0">
-                <button id="toggleDark" class="px-2 py-1 rounded bg-gray-200 dark:bg-gray-700">Modo Oscuro🌙</button>
+                <button id="toggleDark" class="px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 dark:text-gray-200">Modo Oscuro🌙</button>
             </div>
         </nav>
 
@@ -34,14 +39,14 @@
                 <p class="text-base md:text-lg mb-4 text-center">Construcción Sostenible · Eficiencia Energética ·
                     Espacios Verdes</p>
                 <p class="text-sm md:text-base mb-6 text-center">
-                    Somos un grupo de estudiantes del Instituto de Tecnico Superior(ITS) de Cipolletti 
-                    cuyo objetivo principal es brindar una página web con la capacidad de calcular la 
+                    Somos un grupo de estudiantes del Instituto de Tecnico Superior(ITS) de Cipolletti
+                    cuyo objetivo principal es brindar una página web con la capacidad de calcular la
                     cantidad de Co2 mensual que genera cualquier usuario que desee hacer uso de esta misma.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <button id="abrir-modal"
-                            class="rounded-md bg-emerald-500 hover:bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2">
-                            Calcular Mi Huella de Carbono
+                        class="rounded-md bg-emerald-500 hover:bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2">
+                        Calcular Mi Huella de Carbono
                     </button>
                 </div>
             </div>
@@ -391,13 +396,13 @@
     </section>
 
     <!-- Footer -->
-    <footer class="text-center p-6 bg-gray-100 dark:bg-gray-800 mt-10">
+    <footer class="text-center p-6 bg-gray-300 dark:bg-gray-800 mt-10">
         <p class="text-sm md:text-base">© 2025 Redes del ITS</p>
         <div class="flex justify-center space-x-4 mt-2 text-sm">
-            <a href="https://www.instagram.com/its_cipolletti/"><img src="./assets/instagram.webp" alt="logo_instagram" 
-                class="w-12 md:w-16 h-auto mb-4 md:mb-0"></a>
-            <a href="https://web.facebook.com/people/ITS-Cipolletti/100042874851211/"><img src="./assets/facebook.webp" alt="logo_facebook" 
-                class="w-12 md:w-16 h-auto mb-4 md:mb-0"></a>
+            <a href="https://www.instagram.com/its_cipolletti/"><img src="./assets/instagram.webp" alt="logo_instagram"
+                    class="w-12 md:w-16 h-auto mb-4 md:mb-0"></a>
+            <a href="https://web.facebook.com/people/ITS-Cipolletti/100042874851211/"><img src="./assets/facebook.webp"
+                    alt="logo_facebook" class="w-12 md:w-16 h-auto mb-4 md:mb-0"></a>
         </div>
     </footer>
 
