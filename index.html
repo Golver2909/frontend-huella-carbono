@@ -59,7 +59,7 @@
         class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
         <div class="flex min-h-full items-center justify-center p-4 text-center">
             <div
-                class="relative overflow-hidden rounded-xl bg-gray-800 text-left shadow-2xl transition-all w-full max-w-4xl max-h-[90vh]">
+                class="relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 text-left shadow-2xl transition-all w-full max-w-4xl max-h-[90vh]">
                 <!-- Header del modal -->
                 <div class="bg-gradient-to-r from-emerald-600 to-green-600 px-6 py-4 flex items-center justify-between">
                     <h3 class="text-xl font-bold text-white">🌱 Calculadora de Huella de Carbono</h3>
@@ -71,7 +71,7 @@
                     </button>
                 </div>
                 <!-- Contenido del formulario -->
-                <div class="bg-gray-800 overflow-y-auto max-h-[calc(90vh-120px)]">
+                <div class=" bg-gray-100 dark:bg-gray-800 overflow-y-auto max-h-[calc(90vh-120px)]">
                     <form id="form-huella" class="p-6 space-y-8">
 
                         <!-- DATOS PERSONALES -->
@@ -80,20 +80,20 @@
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <label for="nombre" class="block text-sm font-medium text-gray-100 mb-2">
+                                    <label for="nombre" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                         Nombre completo
                                     </label>
                                     <input id="nombre" type="text" name="nombre" required
                                         placeholder="Tu nombre completo"
-                                        class="block w-full rounded-md bg-white/5 px-3 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-emerald-500 sm:text-sm transition-colors" />
+                                        class="block w-full rounded-md bg-white/5 px-3 py-2 text-base text-gray-800 dark:text-gray-100 outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-emerald-500 sm:text-sm transition-colors" />
                                 </div>
 
                                 <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-100 mb-2">
+                                    <label for="email" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                         Correo electrónico
                                     </label>
                                     <input id="email" type="email" name="email" required placeholder="tu@email.com"
-                                        class="block w-full rounded-md bg-white/5 px-3 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-emerald-500 sm:text-sm transition-colors" />
+                                        class="block w-full rounded-md bg-white/5 px-3 py-2 text-base text-gray-800 dark:text-gray-100 outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-emerald-500 sm:text-sm transition-colors" />
                                 </div>
                             </div>
                         </div>
@@ -101,91 +101,91 @@
                         <!-- TRANSPORTE -->
                         <div class="space-y-4">
                             <h4 class="section-title">🚗 Transporte</h4>
-                            <p class="text-gray-300 text-sm mb-4">¿Qué tipos de transporte usas? (puedes seleccionar
+                            <p class="text-gray-800 dark:text-gray-300 text-sm mb-4">¿Qué tipos de transporte usas? (puedes seleccionar
                                 varios)</p>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                                 <label class="checkbox-option">
                                     <input type="checkbox" name="transporte[]" value="a_pie">
-                                    <span class="text-white">🚶‍♂️ A pie</span>
+                                    <span class="text-gray-800 dark:text-gray-100">🚶‍♂️ A pie</span>
                                 </label>
 
                                 <label class="checkbox-option">
                                     <input type="checkbox" name="transporte[]" value="bicicleta">
-                                    <span class="text-white">🚲 Bicicleta</span>
+                                    <span class="text-gray-800 dark:text-gray-100">🚲 Bicicleta</span>
                                 </label>
 
                                 <label class="checkbox-option">
                                     <input type="checkbox" name="transporte[]" value="auto_particular">
-                                    <span class="text-white">🚗 Auto particular</span>
+                                    <span class="text-gray-800 dark:text-gray-100">🚗 Auto particular</span>
                                 </label>
 
                                 <label class="checkbox-option">
                                     <input type="checkbox" name="transporte[]" value="moto">
-                                    <span class="text-white">🏍️ Motocicleta</span>
+                                    <span class="text-gray-800 dark:text-gray-100">🏍️ Motocicleta</span>
                                 </label>
 
                                 <label class="checkbox-option">
                                     <input type="checkbox" name="transporte[]" value="colectivo">
-                                    <span class="text-white">🚌 Colectivo</span>
+                                    <span class="text-gray-800 dark:text-gray-100">🚌 Colectivo</span>
                                 </label>
 
                                 <label class="checkbox-option">
                                     <input type="checkbox" name="transporte[]" value="tren">
-                                    <span class="text-white">🚊 Tren</span>
+                                    <span class="text-gray-800 dark:text-gray-100">🚊 Tren</span>
                                 </label>
 
                                 <label class="checkbox-option">
                                     <input type="checkbox" name="transporte[]" value="subte">
-                                    <span class="text-white">🚇 Subte</span>
+                                    <span class="text-gray-800 dark:text-gray-100">🚇 Subte</span>
                                 </label>
 
                                 <label class="checkbox-option">
                                     <input type="checkbox" name="transporte[]" value="taxi_uber">
-                                    <span class="text-white">🚕 Taxi/Uber</span>
+                                    <span class="text-gray-800 dark:text-gray-100">🚕 Taxi/Uber</span>
                                 </label>
                             </div>
 
                             <!-- Campos de kilómetros -->
-                            <div class="mt-6 space-y-4 bg-gray-700/30 rounded-lg p-4">
-                                <h5 class="subsection-title">📏 Kilómetros semanales por transporte:</h5>
+                            <div class="mt-6 space-y-4 bg-gray-100 dark:bg-gray-700/30 rounded-lg p-4">
+                                <h5 class="subsection-title text-gray-800 dark:text-gray-300">📏 Kilómetros semanales por transporte:</h5>
 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
-                                        <label class="block text-sm text-gray-300 mb-1">Auto particular
+                                        <label class="block text-sm text-gray-800 dark:text-gray-300 mb-1">Auto particular
                                             (km/semana)</label>
                                         <input type="number" name="km_auto" placeholder="Ej: 100" min="0"
-                                            class="w-full rounded-md bg-white/5 px-3 py-2 text-white outline-1 outline-white/10 focus:outline-emerald-500 transition-colors">
+                                            class="w-full rounded-md bg-white/5 px-3 py-2 text-gray-800 dark:text-gray-100 outline-1 outline-white/10 focus:outline-emerald-500 transition-colors">
                                     </div>
 
                                     <div>
-                                        <label class="block text-sm text-gray-300 mb-1">Motocicleta (km/semana)</label>
+                                        <label class="block text-sm text-gray-800 dark:text-gray-300 mb-1">Motocicleta (km/semana)</label>
                                         <input type="number" name="km_moto" placeholder="Ej: 50" min="0"
-                                            class="w-full rounded-md bg-white/5 px-3 py-2 text-white outline-1 outline-white/10 focus:outline-emerald-500 transition-colors">
+                                            class="w-full rounded-md bg-white/5 px-3 py-2 text-gray-800 dark:text-gray-100 outline-1 outline-white/10 focus:outline-emerald-500 transition-colors">
                                     </div>
 
                                     <div>
-                                        <label class="block text-sm text-gray-300 mb-1">Colectivo (km/semana)</label>
+                                        <label class="block text-sm text-gray-800 dark:text-gray-300 mb-1">Colectivo (km/semana)</label>
                                         <input type="number" name="km_colectivo" placeholder="Ej: 30" min="0"
-                                            class="w-full rounded-md bg-white/5 px-3 py-2 text-white outline-1 outline-white/10 focus:outline-emerald-500 transition-colors">
+                                            class="w-full rounded-md bg-white/5 px-3 py-2 text-gray-800 dark:text-gray-100 outline-1 outline-white/10 focus:outline-emerald-500 transition-colors">
                                     </div>
 
                                     <div>
-                                        <label class="block text-sm text-gray-300 mb-1">Tren (km/semana)</label>
+                                        <label class="block text-sm text-gray-800 dark:text-gray-300 mb-1">Tren (km/semana)</label>
                                         <input type="number" name="km_tren" placeholder="Ej: 80" min="0"
-                                            class="w-full rounded-md bg-white/5 px-3 py-2 text-white outline-1 outline-white/10 focus:outline-emerald-500 transition-colors">
+                                            class="w-full rounded-md bg-white/5 px-3 py-2 text-gray-800 dark:text-gray-100 outline-1 outline-white/10 focus:outline-emerald-500 transition-colors">
                                     </div>
 
                                     <div>
-                                        <label class="block text-sm text-gray-300 mb-1">Subte (km/semana)</label>
+                                        <label class="block text-sm text-gray-800 dark:text-gray-300 mb-1">Subte (km/semana)</label>
                                         <input type="number" name="km_subte" placeholder="Ej: 20" min="0"
-                                            class="w-full rounded-md bg-white/5 px-3 py-2 text-white outline-1 outline-white/10 focus:outline-emerald-500 transition-colors">
+                                            class="w-full rounded-md bg-white/5 px-3 py-2 text-gray-800 dark:text-gray-100 outline-1 outline-white/10 focus:outline-emerald-500 transition-colors">
                                     </div>
 
                                     <div>
-                                        <label class="block text-sm text-gray-300 mb-1">Taxi/Uber (km/semana)</label>
+                                        <label class="block text-sm text-gray-800 dark:text-gray-300 mb-1">Taxi/Uber (km/semana)</label>
                                         <input type="number" name="km_taxi" placeholder="Ej: 15" min="0"
-                                            class="w-full rounded-md bg-white/5 px-3 py-2 text-white outline-1 outline-white/10 focus:outline-emerald-500 transition-colors">
+                                            class="w-full rounded-md bg-white/5 px-3 py-2 text-gray-800 dark:text-gray-100 outline-1 outline-white/10 focus:outline-emerald-500 transition-colors">
                                     </div>
                                 </div>
                             </div>
@@ -193,54 +193,54 @@
 
                         <!-- HOGAR -->
                         <div class="space-y-4">
-                            <h4 class="section-title">🏠 Hogar</h4>
+                            <h4 class="section-title text-gray-800 dark:text-gray-300">🏠 Hogar</h4>
 
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 <div>
-                                    <label for="personas_hogar" class="block text-sm font-medium text-gray-100 mb-2">
+                                    <label for="personas_hogar" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                         Personas en el hogar
                                     </label>
                                     <input id="personas_hogar" type="number" name="personas_hogar" min="1" max="20"
                                         placeholder="Ej: 4"
-                                        class="block w-full rounded-md bg-white/5 px-3 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-emerald-500 sm:text-sm transition-colors" />
+                                        class="block w-full rounded-md bg-white/5 px-3 py-2 text-base text-gray-800 dark:text-gray-100 outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-emerald-500 sm:text-sm transition-colors" />
                                 </div>
 
                                 <div>
-                                    <label for="watts_mensuales" class="block text-sm font-medium text-gray-100 mb-2">
+                                    <label for="watts_mensuales" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                         Watts mensuales (factura)
                                     </label>
                                     <input id="watts_mensuales" type="number" name="watts_mensuales" min="0"
                                         placeholder="Ej: 350"
-                                        class="block w-full rounded-md bg-white/5 px-3 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-emerald-500 sm:text-sm transition-colors" />
+                                        class="block w-full rounded-md bg-white/5 px-3 py-2 text-base text-gray-800 dark:text-gray-100 outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-emerald-500 sm:text-sm transition-colors" />
                                 </div>
 
                                 <div>
-                                    <label for="gas_mensual" class="block text-sm font-medium text-gray-100 mb-2">
+                                    <label for="gas_mensual" class="block text-sm font-medium text-gray-800 dark:text-gray-100 mb-2">
                                         Gas mensual (m³)
                                     </label>
                                     <input id="gas_mensual" type="number" name="gas_mensual" min="0"
                                         placeholder="Ej: 120"
-                                        class="block w-full rounded-md bg-white/5 px-3 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-emerald-500 sm:text-sm transition-colors" />
+                                        class="block w-full rounded-md bg-white/5 px-3 py-2 text-base text-gray-800 dark:text-gray-100 outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-emerald-500 sm:text-sm transition-colors" />
                                 </div>
                             </div>
                         </div>
 
                         <!-- ALIMENTACIÓN -->
                         <div class="space-y-4">
-                            <h4 class="section-title">🍖 Alimentación</h4>
-                            <p class="text-gray-300 text-sm mb-4">¿Qué tipos de carne consumes? (puedes seleccionar
+                            <h4 class="section-title text-gray-800 dark:text-gray-100">🍖 Alimentación</h4>
+                            <p class="text-gray-800 dark:text-gray-100 text-sm mb-4">¿Qué tipos de carne consumes? (puedes seleccionar
                                 varios)</p>
 
                             <div id="div" style="display: block;">
-                                <div class="bg-gray-700/30 rounded-lg p-4">
+                                <div class="bg-gray-300 dark:bg-gray-700/30 rounded-lg p-4">
                                     <!-- Carnes agrícolas -->
-                                    <h5 class="subsection-title">🐄 Carnes de industria agrícola:</h5>
+                                    <h5 class="subsection-title text-gray-800 dark:text-gray-100">🐄 Carnes de industria agrícola:</h5>
 
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div>
                                             <label class="checkbox-option">
                                                 <input type="checkbox" name="carnes_agricolas[]" value="bovina">
-                                                <span class="text-white">🥩 Carne bovina (vacuna)</span>
+                                                <span class="text-gray-800 dark:text-gray-100">🥩 Carne bovina (vacuna)</span>
                                             </label>
 
                                         </div>
@@ -248,7 +248,7 @@
                                         <div>
                                             <label class="checkbox-option">
                                                 <input type="checkbox" name="carnes_agricolas[]" value="cerdo">
-                                                <span class="text-white">🐷 Carne de cerdo</span>
+                                                <span class="text-gray-800 dark:text-gray-100">🐷 Carne de cerdo</span>
                                             </label>
 
                                         </div>
@@ -256,7 +256,7 @@
                                         <div>
                                             <label class="checkbox-option">
                                                 <input type="checkbox" name="carnes_agricolas[]" value="pollo">
-                                                <span class="text-white">🐔 Carne de pollo</span>
+                                                <span class="text-gray-800 dark:text-gray-100">🐔 Carne de pollo</span>
                                             </label>
 
                                         </div>
@@ -264,21 +264,21 @@
                                         <div>
                                             <label class="checkbox-option">
                                                 <input type="checkbox" name="carnes_agricolas[]" value="cordero">
-                                                <span class="text-white">🐑 Cordero/Cabra/Otras</span>
+                                                <span class="text-gray-800 dark:text-gray-100">🐑 Cordero/Cabra/Otras</span>
                                             </label>
 
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Carnes pesqueras -->
-                                <div class="bg-gray-700/30 rounded-lg p-4">
+                                <div class="bg-gray-300 dark:bg-gray-700/30 rounded-lg p-4">
                                     <h5 class="subsection-title">🐟 Carnes de industria pesquera:</h5>
 
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div>
                                             <label class="checkbox-option">
                                                 <input type="checkbox" name="carnes_pesqueras[]" value="pescado_fresco">
-                                                <span class="text-white">🐟 Pescados frescos</span>
+                                                <span class="text-gray-800 dark:text-gray-100">🐟 Pescados frescos</span>
                                             </label>
 
                                         </div>
@@ -287,7 +287,7 @@
                                             <label class="checkbox-option">
                                                 <input type="checkbox" name="carnes_pesqueras[]"
                                                     value="pescado_enlatado">
-                                                <span class="text-white">🥫 Pescados enlatados</span>
+                                                <span class="text-gray-800 dark:text-gray-100">🥫 Pescados enlatados</span>
                                             </label>
 
                                         </div>
@@ -295,7 +295,7 @@
                                         <div>
                                             <label class="checkbox-option">
                                                 <input type="checkbox" name="carnes_pesqueras[]" value="mariscos">
-                                                <span class="text-white">🦐 Mariscos (pulpo, camarones)</span>
+                                                <span class="text-gray-800 dark:text-gray-100">🦐 Mariscos (pulpo, camarones)</span>
                                             </label>
 
                                         </div>
@@ -305,10 +305,10 @@
 
 
                             <!-- Opción vegetariana -->
-                            <div class="bg-green-900/20 border border-green-500/20 rounded-lg p-4">
+                            <div class="bg-green-500 dark:bg-green-900/20 border border-green-500/20 rounded-lg p-4">
                                 <label class="checkbox-option">
                                     <input type="checkbox" name="dieta_especial" id="vegetariana" value="vegetariana">
-                                    <span class="text-white">🌱 Soy vegetariano/vegano (no consumo carne)</span>
+                                    <span class="text-gray-800 dark:text-gray-100">🌱 Soy vegetariano/vegano (no consumo carne)</span>
                                 </label>
                             </div>
                         </div>
@@ -316,7 +316,7 @@
                     </form>
                     <!-- Resultado de la calculadora -->
                     <div id="resultado-co2"
-                        class="my-4 p-4 bg-emerald-50 rounded text-gray-800 text-center text-lg font-semibold"
+                        class="my-4 p-4 bg-emerald-500 dark:bg-emerald-50 rounded text-gray-800 dark:text-gray-100 text-center text-lg font-semibold"
                         style="display:none;">
                         <!-- Aquí se mostrará el resultado -->
                     </div>
